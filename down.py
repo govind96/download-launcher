@@ -157,7 +157,7 @@ def calculate_todays_usage():
 
 
 if __name__ == "__main__":
-    os.chdir("/home/govind/Documents")
+    os.chdir("/home/govind/Documents/download-launcher")
     now = pendulum.now()8293
     last_7_days_usage = [0, 0]
     last_months_usage = [0, 0]
