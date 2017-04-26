@@ -108,7 +108,7 @@ def cur_speed(args=None):
         trail_idx = int(log(up) / log(1024))
     except:
         trail_idx = 0
-    up = up / pow(1024, trail_idx)8293
+    up = up / pow(1024, trail_idx)
     str2 = trail[trail_idx] + "/s"
 
     ind.set_label(str(round(down, 1)) + str1 + str(round(up, 1)) + str2)
@@ -158,7 +158,7 @@ def calculate_todays_usage():
 
 if __name__ == "__main__":
     os.chdir("/home/govind/Documents/download-launcher")
-    now = pendulum.now()8293
+    now = pendulum.now()
     last_7_days_usage = [0, 0]
     last_months_usage = [0, 0]
     todays_date = ''
@@ -174,7 +174,7 @@ if __name__ == "__main__":
     item = gtk.MenuItem("Quit")
     reset = gtk.MenuItem("Reset")
     total = gtk.MenuItem("Download " + "0")
-    totalu = gtk.MenuItem("Upload " + "0")8293
+    totalu = gtk.MenuItem("Upload " + "0")
     last_7_days_data = gtk.MenuItem("Last 7 days " + "0")
     this_month = gtk.MenuItem("This Month " + "0")
     item.connect("activate", quit)
@@ -184,7 +184,7 @@ if __name__ == "__main__":
     menu.append(reset)
     menu.append(total)
     menu.append(totalu)
-    menu.append(last_7_days_data)8293
+    menu.append(last_7_days_data)
     menu.append(this_month)
     menu.show_all()
 
@@ -200,7 +200,7 @@ if __name__ == "__main__":
     d1 = int(a[k].split()[1])
     u1 = int(a[k].split()[9])
     fp.close()
-    ini = d18293
+    ini = d1
     down = d1
     iniu = u1
     up = u1
