@@ -38,6 +38,7 @@ def cur_speed(args=None):
     global last_7_days_usage, last_months_usage
     trail = [" KB", " MB", " GB"," TB"]
     if todays_date != pendulum.now().date().for_json():
+        todays_date = pendulum.now().date().for_json()
         usage_data = calculate_todays_usage(); 
     fp = open("/proc/net/dev", "r")
     a = fp.readlines()
@@ -117,7 +118,8 @@ def cur_speed(args=None):
 
     return True
 
-
+'''Resets the current downloading session values (See only current session), 
+everything else will remain the same'''
 def Reset(source):
     global ini, d1, down, up, iniu, u1
     ini = d1
